@@ -1,0 +1,231 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+
+.absc.article .article-content article .xe_content {
+	line-height: 1.7;
+    letter-spacing: -0.25px;
+    font-weight: 400;
+    color:#333;
+}
+
+.absc.article .article-content article .xe_content p{
+    line-height: 1.7;
+    letter-spacing: -0.25px;
+    font-weight: 400;
+    color:#333;
+}
+
+
+/* PC-게시판 상단 게시판 제목 자체 */
+.absc.title > a{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* PC-게시판 상단 게시판 제목 자체2 */
+.absc.title.st3 {
+    1em 0 1.5em 0px;
+}
+
+
+/* PC-게시판 제목 아래 공백 지우기용 */
+.absc.article .article-header {
+	margin-bottom:0;
+}
+
+
+/* PC-게시판 제목 */
+.absc.article .article-header .ah-title {
+	font-size: 2.6em;
+	letter-spacing: -3px;
+    font-weight: 500;
+}
+
+/* PC-게시판 카테고리(분류) */
+.absc.article .article-header .ah-category {
+    font-size: 1.1em;
+    padding-left: 0.1em;
+    color: #D30202;
+}
+
+
+/* PC-웹진형-목록-컨텐츠 간격 */
+.absc.list .ab-webzine .wz-item {
+	padding: 1em 0 2em;
+	margin: 1em 0;
+}
+
+
+
+
+
+/* 리스트형-글보기-메타정보 간격 */
+.absc.article .article-header .ah-meta {
+    line-height: 2.4;
+}
+
+
+/* 페이지네이션 넘버 간격 */
+.absc.pgnt .pagination-num {
+    padding:0 0.5em;
+}
+
+
+/* 내가 쓴글 - 좌우 간격 */
+.absc.tool .btn_img {
+padding: 0 1em;
+}
+
+
+/* PC-댓글 에디터 커서 바꾸기 */
+.absc.comments .comment-write h3 .header-tool a {
+    cursor: pointer;
+}
+
+
+.absc.list .ab-webzine .wz-item .wz-item-header .title{
+	font-size:1.7em;
+	line-height: 1.3;
+	letter-spacing: -1px;
+}
+
+
+.absc.list .commentNum {
+    font-size: 0.95em;
+}
+
+.absc.list .ab-webzine .wz-item .wz-item-header > * {
+    vertical-align:baseline;
+}
+
+
+.absc.list .ab-webzine .wz-item .wz-item-header:not(:last-child){
+    margin-bottom:1em;
+}
+
+
+
+
+.xpress-editor .input_area textarea {
+    line-height: 19px;
+    letter-spacing: 1px;
+    font-size: 13px;
+    font-family: initial;
+    font-weight: normal;
+}
+
+
+.absc.article .article-header {
+    padding:0;
+}
+
+
+.absc.comments .comments-header {
+    padding:0 0.3em;
+}
+
+
+.absc.comments .comments-list .comment-item .comment-footer {
+    float: right;
+}
+
+.absc.comments .comments-list .comment-item .comment-footer .comment-item-tools .comment-item-tool{
+    cursor: pointer;
+}
+
+/* PC-공지화제의글-제목-볼드 */
+.absc.list .ab-table tbody tr.notice td.title {
+    font-weight: 500;
+}
+
+
+/* PC-댓글-추천용 하트 */
+.comment-item-vb .vote {
+vertical-align: baseline;
+    font-size:0.8em;
+    color:red;
+}
+
+.comment-item-vb .vote .fa-heart {
+    color:red;
+}
+
+
+
+
+/* PC-아티클-서명 */
+.signature-custom {
+    font-size:1.3em;
+    font-weight: bold;
+    letter-spacing: -1px;
+    color:#858585;
+    padding:0 0 13px 3px;
+}
+
+
+.absc.article .article-signature.style1 {
+    border-radius: 0;
+    margin-top: 3em;
+    background-color: #fff;
+    padding: 0.6em 0 0.4em 1.8em;
+}
+
+.absc.article .article-signature .profile .profile-nickname *{
+    font-weight:normal;
+    font-size:1em;
+}
+/* PC-아티클-서명 END */
+
+
+/* PC-'글쓴이' 박스 */
+.absc.comments .comments-list .comment-item .comment-header .comment-author .my-comment {
+    padding: 0 0.5em;
+}
+
+/* PC-댓글-닉네임과댓글본문간격 */
+.absc.comments .comments-list .comment-item .comment-header {
+    margin-bottom: 0.7em;
+}
+
+
+
+.absc.list .ab-table tbody tr td:not(.title) {
+    font-size:13px;
+}
+
+
+/* PC-목록-닉네임 가로 줄이기 */
+.author span {
+    display: block;
+    overflow: hidden;
+    max-width: 90px !important;
+    text-overflow: ellipsis; 
+}
+
+
+/* PC-댓글-유저썸네일 키우기 */
+.absc.comments .comments-list .comment-item .comment-header .comment-author .comment-profile {
+    display: inline-block;
+    width: 2.7em;
+    height: 2.7em;
+    background-size: cover;
+    border: 1px solid #ddd;
+    border-radius: 2em;
+    margin-right: 0.2em;
+}
+
+
+/* PC-목록-상태아이콘 간격 */
+.board-wrapper .ic-status {
+    margin-right:0.1em;
+}
+
+
+
+.board-wrapper .videoWrap {
+    text-align: left;
+}
+

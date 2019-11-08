@@ -1,0 +1,107 @@
+var $ = jQuery;
+
+function ab_fontSizeCtr(pm){
+	var c = jQuery('.xe_content');
+	if (pm == 'm') {
+		var font_size = parseFloat(c.css('fontSize'))-2;
+		if (font_size < 8){
+			return;
+		}
+	};
+	if (pm == 'p') {
+		var font_size = parseFloat(c.css('fontSize'))+2;
+		if (font_size > 24){
+			return;
+		}
+	};
+	c.css('font-size',''+font_size+'px');
+}
+
+function reComment(doc_srl,cmt_srl,edit_url,cmt_nn){
+	jQueryto = "<span class='recomment-to ab-point-bgcolor'>@" + cmt_nn + "</span> ";
+	jQuery('.recomment-to').remove();
+	jQuery(jQueryto).prependTo('#reCommentHT');
+
+	var tmp = jQuery('#reCommentBox').eq(0);
+	tmp.find('input[name=error_return_url]').val('/' + doc_srl);
+	tmp.find('input[name=mid]').val(current_mid);
+	tmp.find('input[name=document_srl]').val(doc_srl);
+	tmp.find('input[name=comment_srl]').val('');
+	tmp.appendTo(jQuery('#comment_' + cmt_srl)).show().find('input[name=parent_srl]').val(cmt_srl);
+	tmp.find('#use_editor').attr('href',edit_url);
+	tmp.find('textarea').val('');
+	tmp.find('textarea').focus();
+
+	tmp.find('.reply_stk').attr('onclick', 'loadStickerList(undefined, '+cmt_srl+');');
+	tmp.find('.stk_display').addClass('display-toggle');
+	tmp.find('.stk_display>.stk_head>.sticker_pack, .stk_display>.stk_body').html('');
+}
+
+String.prototype.replaceAll = function(searchStr, replaceStr) {
+	var temp = this;
+	while (temp.indexOf(searchStr) != -1) {
+		temp = temp.replace(searchStr, replaceStr);
+	}
+	return temp;
+}
+
+// 페이지가 로드되고 나서
+$(document).ready(function () {
+	$('.showPopover').click(function(){
+		$parent = $(this).parent();
+		$parent.children('.ab-popover').show();
+		$('.ab-popover-bg').show();
+		$(this).addClass('hidePopover');
+	});
+	$('.ab-popover-bg').click(function(){
+		$parent = $('.hidePopover').parent();
+		$parent.children('.ab-popover').hide();
+		$('.ab-popover-bg').hide();
+		$('.hidePopover').removeClass('hidePopover');
+	});
+	$('.ab-faq-q').click(function(){
+		if($(this).find('strong').length) {
+			$parent = $(this).parent();
+			$parent.find('.ab-faq-a').slideToggle();
+			$(this).find('p').unwrap()
+		}
+		else {
+			$parent = $(this).parent();
+			$parent.find('.ab-faq-a').slideToggle();
+			$(this).find('p').wrap('<strong />')
+		}
+	});
+	$('body').append("<div id='flagEnd'></div>");
+	
+	// var target_srl_2 = $('.wfsh-timeline #board_target').find('option[value=' + $(this).val() + ']').attr('srl');
+	// $('.wfsh-timeline #category option').each( function () {
+	// 	if ($('.wfsh-timeline #category option').attr('srl').indexOf(target_srl_2) != -1){
+	// 		$('.wfsh-timeline #category option').show();
+	// 	}
+	// 	else {
+	// 		$('.wfsh-timeline #category option').hide();
+	// 	}
+	// });
+
+	$('.wfsh-timeline #board_target').change( function() {
+		var target_srl = $(this).find('option[value=' + $(this).val() + ']').attr('srl');
+		$('.wfsh-timeline #category option').each( function () {
+			if ($(this).attr('srl').indexOf(target_srl) != -1){
+				$(this).show();
+			}
+			else {
+				$(this).hide();
+			}
+		})
+		if ($('.wfsh-timeline #category option[srl='+ target_srl +']').length) {
+			$('.wfsh-timeline #category').parent().show();
+			$('.wfsh-timeline #category option[srl='+ target_srl +']:eq(0)').prop("selected", true);
+		}
+		else {
+			$('.wfsh-timeline #category').parent().hide();
+		}
+	});
+	if ($('.wfsh-timeline #category option[srl='+ $('.wfsh-timeline #board_target option:eq(0)').attr('srl') +']').length == false) {
+		$('.wfsh-timeline #category').parent().hide();
+	}
+});
