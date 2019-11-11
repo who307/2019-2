@@ -1,6 +1,6 @@
 # 문건후 : daelim2019-2 project
 
-## 2019. 11.05
+## 2019. 11.08
 #### infinityScroll.html / backstretch.html / vegas.html추가
 > 1.  무한스크롤 구현
 > 2. backstretch plugin 사용해서 이미지 풀스크린 페이드
