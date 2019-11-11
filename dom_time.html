@@ -1,0 +1,47 @@
+<html lang="ko">
+<meta charset="UTF-8">
+<html>
+
+<head>
+    <title>Clock</title>
+    <script>
+            // 이벤트를 연결합니다.
+            window.onload = function() {
+                //문서 객체를 선택합니다.
+                var clock = document.getElementById('clock');
+                //1초마다 함수를 실행합니다.
+                setInterval(function () {
+                    var now = new Date();
+                    clock.innerHTML = now.toString();
+                }, 1000);
+            };
+        
+        //     var currentYear = date.getFullyear();       // year 추출
+        //     var currentMonth = (date.getgetMonth() + 1);  // Month 추출 
+        //     var currentDate = date.getDate();           // Date 추출   
+        //     var currentHours = date.getHours();         // Hours 추출
+        //     var currentMinutes = date.getMinutes();     // minutes 추출
+        //     var currentSeconds = date.getSeconds();     // seconds 추출
+        //     var dateAll = date + "<br/>" +
+        //         currentyear + "년 <br/>" +
+        //         currentMonth + "월 <br/>" +
+        //         currentDate + "일 <br/>" +
+        //         currentHours + "시 <br/>" +
+        //         currentMinutes + "분 <br/>" +
+        //         currentSeconds + "초 <br/>" +
+        //         "입니다.";
+        //     document.body.innerHTML = dateAll; // dateAll 출력
+        //     // 1초간격
+        // }, 1000);
+
+
+    </script>
+    
+</head>
+
+<body>
+    <h1 id="clock"></h1>
+</body>
+
+</html>
+

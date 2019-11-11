@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>제이쿼리</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+
+        .box.hover {
+            background-color: blue;
+            border-radius: 50px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script>
+        //이벤트를 연결합니다.
+        $(document).ready(function () {
+            //이벤트를 연결합니다.
+            $('button').click(function () {
+                //간단한 효과를 적용
+                $('.page').fadeToggle('slow');
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <button>Toggle Show</button>
+    <div class="page">
+        <h1>Lore ipsum dolor sit amet</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+    </div>
+
+</body>
+
+</html>
