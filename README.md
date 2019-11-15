@@ -1,5 +1,12 @@
 # 문건후 : daelim2019-2 project
 
+## 2019. 11.15
+#### bootstrap.html 추가
+> 1. bootstrap을 적용하여 html 활용
+> 2. Favicon 적용
+
+
+
 ## 2019. 11.08
 #### infinityScroll.html / backstretch.html / vegas.html추가
 > 1.  무한스크롤 구현
